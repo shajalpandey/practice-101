@@ -25,13 +25,13 @@ pipeline:
             os: Linux
             arch: Amd64
           runtime:
-            type: Docker
+            type: Cloud
             spec: {}
           execution:
             steps:
               - step:
                   type: Run
-                  name: Run_1
+                  name: shell-command
                   identifier: Run_1
                   spec:
                     shell: Sh
