@@ -29,11 +29,6 @@ pipeline:
             type: Cloud
             spec: {}
           execution:
-            strategy:
-              matrix:
-                repo_name:
-                  - test123
-                  - test456
             steps:
               - step:
                   type: Run
@@ -46,3 +41,8 @@ pipeline:
                     command: |-
                       git fetch --all
                       git branch -r
+        strategy:
+          matrix:
+            repo_name:
+              - test123
+              - test456
