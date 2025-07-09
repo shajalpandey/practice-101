@@ -8,7 +8,7 @@ pipeline:
     ci:
       codebase:
         connectorRef: orggithubconnector
-        repoName: <+matrix.repo_name>
+        repoName: <+stage.matrix.repo_name>
         build: <+input>
         sparseCheckout: []
   stages:
