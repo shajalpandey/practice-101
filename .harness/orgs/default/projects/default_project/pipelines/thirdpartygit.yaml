@@ -7,9 +7,10 @@ pipeline:
   properties:
     ci:
       codebase:
-        connectorRef: shajal
-        repoName: practice-101
+        connectorRef: orggithubconnector
+        repoName: test123
         build: <+input>
+        sparseCheckout: []
   stages:
     - stage:
         name: build
@@ -28,6 +29,11 @@ pipeline:
             type: Cloud
             spec: {}
           execution:
+            strategy:
+              matrix:
+                repo_name:
+                  - test123
+                  - test456
             steps:
               - step:
                   type: Run
