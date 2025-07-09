@@ -34,5 +34,9 @@ pipeline:
                   name: shell-command
                   identifier: Run_1
                   spec:
+                    connectorRef: dockerconnector
+                    image: alpine/git:v2.49.0
                     shell: Sh
-                    command: ls
+                    command: |-
+                      git fetch --all
+                      git branch -r
