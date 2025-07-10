@@ -43,4 +43,4 @@ pipeline:
                       git fetch --all
                       git branch -r
                     envVariables:
-                      PAT_TOKEN: <+secrets.getValue("github_pat")>
+                      PAT_TOKEN: <+secrets.getValue("harness-git-pat")>
