@@ -45,4 +45,4 @@ pipeline:
           matrix:
             repo_name:
               - practice-101
-              - practice-02
+              - practice02
