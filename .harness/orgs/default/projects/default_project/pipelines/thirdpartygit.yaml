@@ -7,7 +7,7 @@ pipeline:
   properties:
     ci:
       codebase:
-        connectorRef: shajal-2
+        connectorRef: shajal2
         repoName: <+stage.matrix.repo_name>
         build: <+input>
         sparseCheckout: []
