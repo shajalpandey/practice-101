@@ -39,5 +39,6 @@ pipeline:
                     image: alpine/git:v2.49.0
                     shell: Sh
                     command: |-
+                      git clone https://git:<token>@github.com/owner/repo.git
                       git fetch --all
                       git branch -r
