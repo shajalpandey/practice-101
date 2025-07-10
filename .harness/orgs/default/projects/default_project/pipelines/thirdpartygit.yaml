@@ -39,6 +39,8 @@ pipeline:
                     image: alpine/git:v2.49.0
                     shell: Sh
                     command: |-
-                      git clone https://github.com/shajalpandey/practice02.git
+                      git https://${PAT_TOKEN}@github.com/shajalpandey/practice02.git
                       git fetch --all
                       git branch -r
+                    envVariables:
+                      PAT_TOKEN: <+secrets.getValue("github_pat")>
